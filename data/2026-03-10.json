@@ -1,0 +1,240 @@
+{
+  "date": "2026-03-10",
+  "generatedAt": "2026-03-10T05:09:50.244Z",
+  "source": "motorist.sg",
+  "companies": [
+    "esso",
+    "shell",
+    "spc",
+    "caltex",
+    "sinopec"
+  ],
+  "grades": [
+    "92",
+    "95",
+    "98",
+    "premium",
+    "diesel"
+  ],
+  "prices": {
+    "92": {
+      "esso": {
+        "pump": 3.11,
+        "discounted": 2.23,
+        "card": "DBS Esso",
+        "discountPct": 21.6
+      },
+      "shell": {
+        "pump": null,
+        "discounted": null,
+        "card": "UOB One",
+        "discountPct": null
+      },
+      "spc": {
+        "pump": 3.11,
+        "discounted": 2.2,
+        "card": "UOB One",
+        "discountPct": 22.66
+      },
+      "caltex": {
+        "pump": 3.11,
+        "discounted": 2.17,
+        "card": "Citibank Cash Back",
+        "discountPct": 23.64
+      },
+      "sinopec": {
+        "pump": null,
+        "discounted": null,
+        "card": "OCBC 365",
+        "discountPct": null
+      }
+    },
+    "95": {
+      "esso": {
+        "pump": 3.15,
+        "discounted": 2.26,
+        "card": "DBS Esso",
+        "discountPct": 21.6
+      },
+      "shell": {
+        "pump": 3.31,
+        "discounted": 2.27,
+        "card": "UOB One",
+        "discountPct": 21.15
+      },
+      "spc": {
+        "pump": 3.14,
+        "discounted": 2.22,
+        "card": "UOB One",
+        "discountPct": 22.66
+      },
+      "caltex": {
+        "pump": 3.15,
+        "discounted": 2.2,
+        "card": "Citibank Cash Back",
+        "discountPct": 23.64
+      },
+      "sinopec": {
+        "pump": 3.05,
+        "discounted": 2.11,
+        "card": "OCBC 365",
+        "discountPct": 26.8
+      }
+    },
+    "98": {
+      "esso": {
+        "pump": 3.65,
+        "discounted": 2.65,
+        "card": "DBS Esso",
+        "discountPct": 21.6
+      },
+      "shell": {
+        "pump": 3.83,
+        "discounted": 2.68,
+        "card": "UOB One",
+        "discountPct": 21.15
+      },
+      "spc": {
+        "pump": 3.65,
+        "discounted": 2.61,
+        "card": "UOB One",
+        "discountPct": 22.66
+      },
+      "caltex": {
+        "pump": null,
+        "discounted": null,
+        "card": "Citibank Cash Back",
+        "discountPct": null
+      },
+      "sinopec": {
+        "pump": 3.55,
+        "discounted": 2.47,
+        "card": "OCBC 365",
+        "discountPct": 26.8
+      }
+    },
+    "premium": {
+      "esso": {
+        "pump": null,
+        "discounted": null,
+        "card": "DBS Esso",
+        "discountPct": null
+      },
+      "shell": {
+        "pump": 4.05,
+        "discounted": 2.85,
+        "card": "UOB One",
+        "discountPct": 21.15
+      },
+      "spc": {
+        "pump": null,
+        "discounted": null,
+        "card": "UOB One",
+        "discountPct": null
+      },
+      "caltex": {
+        "pump": 3.84,
+        "discounted": 2.73,
+        "card": "Citibank Cash Back",
+        "discountPct": 23.64
+      },
+      "sinopec": {
+        "pump": 3.68,
+        "discounted": 2.57,
+        "card": "OCBC 365",
+        "discountPct": 26.8
+      }
+    },
+    "diesel": {
+      "esso": {
+        "pump": 2.98,
+        "discounted": 2.07,
+        "card": "DBS Esso",
+        "discountPct": 21.6
+      },
+      "shell": {
+        "pump": 3.24,
+        "discounted": 2.08,
+        "card": "UOB One",
+        "discountPct": 21.15
+      },
+      "spc": {
+        "pump": 2.93,
+        "discounted": 1.99,
+        "card": "UOB One",
+        "discountPct": 22.66
+      },
+      "caltex": {
+        "pump": 2.98,
+        "discounted": 2.02,
+        "card": "Citibank Cash Back",
+        "discountPct": 23.64
+      },
+      "sinopec": {
+        "pump": 2.84,
+        "discounted": 1.89,
+        "card": "OCBC 365",
+        "discountPct": 26.8
+      }
+    }
+  },
+  "summary": {
+    "cheapestByGrade": {
+      "92": {
+        "pump": {
+          "company": "esso",
+          "price": 3.11
+        },
+        "discounted": {
+          "company": "caltex",
+          "price": 2.17,
+          "card": "Citibank Cash Back"
+        }
+      },
+      "95": {
+        "pump": {
+          "company": "sinopec",
+          "price": 3.05
+        },
+        "discounted": {
+          "company": "sinopec",
+          "price": 2.11,
+          "card": "OCBC 365"
+        }
+      },
+      "98": {
+        "pump": {
+          "company": "sinopec",
+          "price": 3.55
+        },
+        "discounted": {
+          "company": "sinopec",
+          "price": 2.47,
+          "card": "OCBC 365"
+        }
+      },
+      "premium": {
+        "pump": {
+          "company": "sinopec",
+          "price": 3.68
+        },
+        "discounted": {
+          "company": "sinopec",
+          "price": 2.57,
+          "card": "OCBC 365"
+        }
+      },
+      "diesel": {
+        "pump": {
+          "company": "sinopec",
+          "price": 2.84
+        },
+        "discounted": {
+          "company": "sinopec",
+          "price": 1.89,
+          "card": "OCBC 365"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SG Fuel Prices - Singapore Petrol Price Tracker</title>
+  <meta name="description" content="Compare daily fuel prices across Esso, Shell, SPC, Caltex and Sinopec in Singapore. Track historical prices and credit card promotions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛽</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="header-title"><span class="fuel-icon">&#9981;</span> SG Fuel Prices</h1>
+      <p class="header-subtitle">Compare petrol &amp; diesel prices across all Singapore stations</p>
+      <p class="header-updated" id="lastUpdated"></p>
+    </div>
+  </header>
+
+  <nav class="toolbar" id="toolbar">
+    <div class="toolbar-inner">
+      <div class="date-nav" id="dateNav">
+        <button class="btn-icon" id="prevDate" aria-label="Previous date">&larr;</button>
+        <input type="date" id="datePicker" class="date-picker">
+        <button class="btn-icon" id="nextDate" aria-label="Next date">&rarr;</button>
+        <button class="btn-small" id="todayBtn">Today</button>
+      </div>
+      <div class="company-filters" id="companyFilters"></div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <!-- Summary -->
+    <section class="section summary-section" id="summarySection">
+      <div class="summary-cards" id="summaryCards"></div>
+    </section>
+
+    <!-- Pump Prices -->
+    <section class="section" id="pumpSection">
+      <h2 class="section-title">Pump Prices</h2>
+      <div class="table-wrapper" id="pumpTableWrapper">
+        <div class="loading-skeleton" id="pumpLoading">Loading prices...</div>
+      </div>
+    </section>
+
+    <!-- Discounted Prices -->
+    <section class="section" id="discountSection">
+      <h2 class="section-title">Best Credit Card Prices</h2>
+      <div class="table-wrapper" id="discountTableWrapper">
+        <div class="loading-skeleton" id="discountLoading">Loading prices...</div>
+      </div>
+    </section>
+
+    <!-- Price Trends -->
+    <section class="section" id="chartSection">
+      <h2 class="section-title">Price Trends</h2>
+      <div class="chart-container" id="chartContainer">
+        <div class="loading-skeleton">Loading trends...</div>
+      </div>
+    </section>
+
+    <!-- Credit Card Promotions -->
+    <section class="section" id="promoSection">
+      <h2 class="section-title">Credit Card Promotions</h2>
+      <div class="promo-grid" id="promoGrid">
+        <div class="loading-skeleton">Loading promotions...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="mini-calendar" id="miniCalendar"></div>
+      <div class="footer-info">
+        <p>Data sourced from <a href="https://www.motorist.sg/petrol-prices" target="_blank" rel="noopener">motorist.sg</a>. Updated daily.</p>
+        <p class="footer-note">Prices in SGD. Discounted prices include credit card promotions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

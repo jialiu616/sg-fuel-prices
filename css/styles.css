@@ -1,0 +1,709 @@
+/* ============================================
+   SG Fuel Prices — Styles
+   Light theme with brand-color accents
+   ============================================ */
+
+/* --- CSS Variables --- */
+:root {
+  /* Base */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f6f8;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #1a1a2e;
+  --text-secondary: #5a6577;
+  --text-muted: #8e99a9;
+  --border: #dfe3e8;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+
+  /* Brand Colors */
+  --esso-primary: #1A3C6E;
+  --esso-accent: #CC0000;
+  --esso-bg: rgba(26, 60, 110, 0.07);
+
+  --shell-primary: #DD1D21;
+  --shell-accent: #FBCE07;
+  --shell-bg: rgba(221, 29, 33, 0.06);
+
+  --spc-primary: #003DA5;
+  --spc-accent: #E31937;
+  --spc-bg: rgba(0, 61, 165, 0.06);
+
+  --caltex-primary: #ED1C24;
+  --caltex-accent: #009639;
+  --caltex-bg: rgba(237, 28, 36, 0.05);
+
+  --sinopec-primary: #CC0000;
+  --sinopec-accent: #003399;
+  --sinopec-bg: rgba(204, 0, 0, 0.05);
+
+  /* Semantic */
+  --cheapest: #16a34a;
+  --cheapest-bg: rgba(22, 163, 74, 0.08);
+  --expensive: #dc2626;
+  --price-up: #dc2626;
+  --price-down: #16a34a;
+  --link: #2563eb;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* --- Header --- */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.fuel-icon {
+  font-size: 1.6rem;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.header-updated {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* --- Toolbar --- */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+}
+
+.toolbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.15s ease;
+}
+.btn-icon:hover {
+  background: var(--bg-secondary);
+  border-color: var(--text-muted);
+}
+
+.date-picker {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.btn-small {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn-small:hover {
+  background: var(--text-primary);
+  color: #fff;
+  border-color: var(--text-primary);
+}
+
+/* --- Company Filters --- */
+.company-filters {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-pill {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+}
+.filter-pill:hover {
+  border-color: var(--text-muted);
+}
+.filter-pill.active {
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Brand-specific active pill styles */
+.filter-pill[data-company="all"].active {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+.filter-pill[data-company="esso"].active {
+  background: var(--esso-primary);
+}
+.filter-pill[data-company="shell"].active {
+  background: var(--shell-primary);
+}
+.filter-pill[data-company="spc"].active {
+  background: var(--spc-primary);
+}
+.filter-pill[data-company="caltex"].active {
+  background: var(--caltex-primary);
+}
+.filter-pill[data-company="sinopec"].active {
+  background: var(--sinopec-primary);
+}
+
+/* --- Main --- */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--bg-tertiary);
+}
+
+/* --- Summary Cards --- */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.summary-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--cheapest);
+}
+
+.summary-card .grade-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.summary-card .cheapest-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cheapest);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-card .cheapest-company {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.summary-card .cheapest-card {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* --- Price Tables --- */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--bg-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  min-width: 500px;
+}
+
+.price-table th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0.85rem 1rem;
+  text-align: center;
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--bg-tertiary);
+}
+
+.price-table th:first-child {
+  text-align: left;
+  min-width: 100px;
+}
+
+.price-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--bg-tertiary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.price-table td:first-child {
+  text-align: left;
+}
+
+/* Company row styling */
+.price-table tr[data-company] td:first-child {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.price-table tr[data-company="esso"] { background: var(--esso-bg); }
+.price-table tr[data-company="esso"] td:first-child { border-left: 4px solid var(--esso-primary); }
+.price-table tr[data-company="esso"] .company-dot { background: var(--esso-primary); }
+
+.price-table tr[data-company="shell"] { background: var(--shell-bg); }
+.price-table tr[data-company="shell"] td:first-child { border-left: 4px solid var(--shell-primary); }
+.price-table tr[data-company="shell"] .company-dot { background: var(--shell-primary); }
+
+.price-table tr[data-company="spc"] { background: var(--spc-bg); }
+.price-table tr[data-company="spc"] td:first-child { border-left: 4px solid var(--spc-primary); }
+.price-table tr[data-company="spc"] .company-dot { background: var(--spc-primary); }
+
+.price-table tr[data-company="caltex"] { background: var(--caltex-bg); }
+.price-table tr[data-company="caltex"] td:first-child { border-left: 4px solid var(--caltex-primary); }
+.price-table tr[data-company="caltex"] .company-dot { background: var(--caltex-primary); }
+
+.price-table tr[data-company="sinopec"] { background: var(--sinopec-bg); }
+.price-table tr[data-company="sinopec"] td:first-child { border-left: 4px solid var(--sinopec-primary); }
+.price-table tr[data-company="sinopec"] .company-dot { background: var(--sinopec-primary); }
+
+.price-table tr[data-company]:hover {
+  filter: brightness(0.97);
+}
+
+/* Cheapest highlight */
+.price-cell.cheapest {
+  color: var(--cheapest);
+  font-weight: 700;
+  background: var(--cheapest-bg);
+  border-radius: 6px;
+}
+
+.price-cell.unavailable {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Discount sub-label */
+.price-cell .card-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.price-cell .discount-pct {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--cheapest);
+}
+
+/* Hidden rows (filtered) */
+.price-table tr.hidden {
+  display: none;
+}
+
+/* --- Chart Container --- */
+.chart-container {
+  background: var(--bg-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.chart-card {
+  padding: 0.75rem;
+}
+
+.chart-card .chart-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.chart-card svg {
+  width: 100%;
+  height: 60px;
+}
+
+.chart-card .chart-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Promo Grid --- */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.promo-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.15rem;
+  border-top: 3px solid var(--link);
+  transition: box-shadow 0.2s ease;
+}
+.promo-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.promo-card .promo-bank {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.promo-card .promo-card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.promo-card .promo-discount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cheapest);
+  margin-bottom: 0.5rem;
+}
+
+.promo-card .promo-companies {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.promo-company-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  color: #fff;
+  text-transform: capitalize;
+}
+.promo-company-tag.esso { background: var(--esso-primary); }
+.promo-company-tag.shell { background: var(--shell-primary); }
+.promo-company-tag.spc { background: var(--spc-primary); }
+.promo-company-tag.caltex { background: var(--caltex-primary); }
+.promo-company-tag.sinopec { background: var(--sinopec-primary); }
+
+.promo-card .promo-conditions {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.promo-card .promo-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* --- Footer --- */
+.footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-info p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.footer-note {
+  color: var(--text-muted) !important;
+  font-size: 0.75rem !important;
+}
+
+/* --- Mini Calendar --- */
+.mini-calendar {
+  flex-shrink: 0;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.cal-header .cal-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cal-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+.cal-header button:hover {
+  background: var(--bg-secondary);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 28px);
+  gap: 2px;
+  justify-items: center;
+}
+
+.cal-grid .cal-dow {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 28px;
+}
+
+.cal-day {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.cal-day.has-data {
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--bg-secondary);
+}
+.cal-day.has-data:hover {
+  background: var(--bg-tertiary);
+}
+
+.cal-day.today {
+  border: 2px solid var(--link);
+}
+
+.cal-day.selected {
+  background: var(--text-primary);
+  color: #fff;
+}
+
+/* --- Loading & States --- */
+.loading-skeleton {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.error-state {
+  padding: 2rem;
+  text-align: center;
+  color: var(--expensive);
+  font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+  .header-title {
+    font-size: 1.5rem;
+  }
+  .toolbar {
+    padding: 0.6rem 1rem;
+  }
+  .toolbar-inner {
+    gap: 0.6rem;
+  }
+  .main {
+    padding: 1rem;
+  }
+  .summary-cards {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .promo-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-inner {
+    flex-direction: column;
+  }
+  .company-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+  }
+  .filter-pill {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.25rem;
+  }
+  .header-subtitle {
+    font-size: 0.85rem;
+  }
+  .section-title {
+    font-size: 1rem;
+  }
+  .summary-card .cheapest-price {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sg-fuel-prices",
+  "version": "1.0.0",
+  "description": "Singapore fuel price tracker with daily updates",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-prices.js",
+    "fetch-promos": "node scripts/fetch-promos.js",
+    "update-index": "node scripts/update-index.js",
+    "daily": "node scripts/fetch-prices.js && node scripts/update-index.js",
+    "serve": "npx http-server . -p 8080 -c-1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

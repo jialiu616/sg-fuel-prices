@@ -1,0 +1,53 @@
+{
+  "lastUpdated": "2026-03-10T00:00:00.000Z",
+  "promotions": [
+    {
+      "card": "OCBC 365 Credit Card",
+      "bank": "OCBC",
+      "discount": "26.8% off fuel at Sinopec",
+      "companies": ["sinopec"],
+      "conditions": "Min. spend $800/month. Cashback cap $80/month. 6% base cashback on petrol.",
+      "url": "https://www.ocbc.com/personal-banking/cards/365-credit-card"
+    },
+    {
+      "card": "Citibank Cash Back+ Card",
+      "bank": "Citibank",
+      "discount": "23.64% off fuel at Caltex",
+      "companies": ["caltex"],
+      "conditions": "Min. spend $800/month. Cashback cap $25/category/month. 1.6% base + instant discount.",
+      "url": "https://www.citibank.com.sg/credit-cards/cash-back-plus/"
+    },
+    {
+      "card": "UOB One Card",
+      "bank": "UOB",
+      "discount": "Up to 22.66% off fuel at SPC, 21.15% at Shell",
+      "companies": ["spc", "shell"],
+      "conditions": "Min. spend $500/month + salary credit $2,000/month. Rebate up to 10%.",
+      "url": "https://www.uob.com.sg/personal/cards/credit-cards/uob-one-card.page"
+    },
+    {
+      "card": "DBS Esso Card",
+      "bank": "DBS",
+      "discount": "21.6% off fuel at Esso",
+      "companies": ["esso"],
+      "conditions": "Instant 21.6% pump discount at Esso stations. No minimum spend required.",
+      "url": "https://www.dbs.com.sg/personal/cards/credit-cards/dbs-esso-card"
+    },
+    {
+      "card": "HSBC Revolution Card",
+      "bank": "HSBC",
+      "discount": "4 mpd on contactless payments incl. petrol",
+      "companies": ["esso", "shell", "spc", "caltex", "sinopec"],
+      "conditions": "4X rewards on contactless, online and foreign currency spend. No min. spend.",
+      "url": "https://www.hsbc.com.sg/credit-cards/products/revolution/"
+    },
+    {
+      "card": "AMEX True Cashback Card",
+      "bank": "American Express",
+      "discount": "Up to 22.2% savings at SPC",
+      "companies": ["spc"],
+      "conditions": "AMEX-SPC promotion. 1.5% unlimited cashback + SPC instant discount. Valid till 31 Dec 2026.",
+      "url": "https://www.americanexpress.com/sg/credit-cards/true-cashback-card/"
+    }
+  ]
+}
