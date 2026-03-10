@@ -1,6 +1,6 @@
 {
   "date": "2026-03-10",
-  "generatedAt": "2026-03-10T05:09:50.244Z",
+  "generatedAt": "2026-03-10T16:54:39.759Z",
   "source": "motorist.sg",
   "companies": [
     "esso",
@@ -19,7 +19,7 @@
   "prices": {
     "92": {
       "esso": {
-        "pump": 3.11,
+        "pump": 3.27,
         "discounted": 2.23,
         "card": "DBS Esso",
         "discountPct": 21.6
@@ -37,7 +37,7 @@
         "discountPct": 22.66
       },
       "caltex": {
-        "pump": 3.11,
+        "pump": 3.31,
         "discounted": 2.17,
         "card": "Citibank Cash Back",
         "discountPct": 23.64
@@ -51,7 +51,7 @@
     },
     "95": {
       "esso": {
-        "pump": 3.15,
+        "pump": 3.31,
         "discounted": 2.26,
         "card": "DBS Esso",
         "discountPct": 21.6
@@ -69,7 +69,7 @@
         "discountPct": 22.66
       },
       "caltex": {
-        "pump": 3.15,
+        "pump": 3.35,
         "discounted": 2.2,
         "card": "Citibank Cash Back",
         "discountPct": 23.64
@@ -83,7 +83,7 @@
     },
     "98": {
       "esso": {
-        "pump": 3.65,
+        "pump": 3.81,
         "discounted": 2.65,
         "card": "DBS Esso",
         "discountPct": 21.6
@@ -133,7 +133,7 @@
         "discountPct": null
       },
       "caltex": {
-        "pump": 3.84,
+        "pump": 4.04,
         "discounted": 2.73,
         "card": "Citibank Cash Back",
         "discountPct": 23.64
@@ -147,7 +147,7 @@
     },
     "diesel": {
       "esso": {
-        "pump": 2.98,
+        "pump": 3.24,
         "discounted": 2.07,
         "card": "DBS Esso",
         "discountPct": 21.6
@@ -165,7 +165,7 @@
         "discountPct": 22.66
       },
       "caltex": {
-        "pump": 2.98,
+        "pump": 3.28,
         "discounted": 2.02,
         "card": "Citibank Cash Back",
         "discountPct": 23.64
@@ -182,7 +182,7 @@
     "cheapestByGrade": {
       "92": {
         "pump": {
-          "company": "esso",
+          "company": "spc",
           "price": 3.11
         },
         "discounted": {
